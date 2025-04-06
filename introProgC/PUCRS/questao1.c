@@ -1,5 +1,6 @@
+/* 1. Escrever um algoritmo que lê 5 valores para a, um de cada vez, e conta quantos destes valores são negativos, escrevendo esta informação. */
+
 #include <stdio.h>
-#include <stdlib.h>
 
 int main() {
        
@@ -16,6 +17,8 @@ int main() {
     
     printf("Quantidade de valores negativos: %d\n", contarNegativos);
     
-    system ("pause");
+    printf("Pressione Enter para sair...\n");
+    getchar(); 
+    getchar();
     return 0;
 }

@@ -1,5 +1,8 @@
+/* 2. Escrever um algoritmo que lê um valor N inteiro e positivo 
+e que calcula e escreve o valor de E 
+E = 1 + 1 / 1! + 1 / 2! + 1 / 3! + 1 / N! */
+
 #include <stdio.h>
-#include <stdlib.h>
 
 int main() {
     int n = 0, k;
@@ -22,6 +25,6 @@ int main() {
 
     printf("O valor de E é: %.15lf\n", soma); // Usando %.15lf para maior precisão
     
-    system("pause");
+
     return 0;
 }

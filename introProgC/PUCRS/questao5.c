@@ -1,12 +1,14 @@
+/* 5. Construir um algoritmo que calcule a média aritmética de vários valores inteiros positivos, lidos externamente. O final da leitura acontecerá quando for lido um valor
+negativo */
+
 #include <stdio.h>
-#include <stdlib.h>
 
 int main() {
     int valor;
     int soma = 0;
     int quantidade = 0;
 
-    printf("Digite valores inteiros positivos (um valor negativo para encerrar):\n");
+    printf("Digite valores inteiros positivos (um valor negativo para encerrar e saber a media):\n");
 
     while (1) { // Loop infinito
         printf("Digite um valor: ");
@@ -29,7 +31,9 @@ int main() {
     } else {
         printf("Nenhum valor positivo foi inserido.\n");
     }
+    
 
-    system("pause");
+    printf("Programa encerrado.\n");
+
     return 0;
 }
