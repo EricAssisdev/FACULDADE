@@ -1,0 +1,29 @@
+ALGORITMO ExpressoesMatematicas
+
+// Declaração de variáveis (assumidas como já inicializadas)
+VAR
+    A, B, C, TOTAL, N, D, E, base, expoente, a, b, c: REAL
+    resultado: REAL
+
+INICIO
+    // a) (A + B) * C
+    resultado ← (A + B) * C
+    ESCREVA("Resultado a: ", resultado)
+
+    // b) TOTAL / N
+    resultado ← TOTAL / N
+    ESCREVA("Resultado b: ", resultado)
+
+    // c) A - B(C + D^2) / E
+    resultado ← A - (B * (C + D^2)) / E
+    ESCREVA("Resultado c: ", resultado)
+
+    // d) base^expoente
+    resultado ← base ^ expoente
+    ESCREVA("Resultado d: ", resultado)
+
+    // e) a * b^c
+    resultado ← a * (b ^ c)
+    ESCREVA("Resultado e: ", resultado)
+
+FIM
