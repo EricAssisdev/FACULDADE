@@ -3,18 +3,18 @@
 
 **Equipe:** Eric Assis e José Raimundo
 
-O **Voz Segura** é uma aplicação desenvolvida com o objetivo de auxiliar no combate à violência contra a mulher e na prevenção ao feminicídio. O projeto foi idealizado para atender às necessidades do **Instituto Voz da Mulher** (cliente fictício) e estruturado pela equipe **SafeTech Solutions**, aplicando as melhores práticas de Engenharia de Software e metodologias ágeis (Scrum/Trello).
+O **Voz Segura** é uma aplicação desenvolvida com o objetivo de auxiliar no combate à violência contra a mulher e na prevenção ao feminicídio. O projeto foi idealizado para atender às necessidades de mulheres em situação de vulnerabilidade, oferecendo um espaço de denúncia, acolhimento e acesso a informações sobre direitos e redes de apoio.
 
-Este sistema visa oferecer um canal seguro, acessível, confidencial e em estrita conformidade com a **Lei Geral de Proteção de Dados (LGPD)**, servindo como uma ferramenta de acolhimento e socorro rápido em situações de risco.
+Este sistema visa oferecer um canal seguro, acessível, confidencial e em estrita conformidade com a **Lei Geral de Proteção de Dados (LGPD)**, servindo como uma ferramenta de acolhimento e socorro imediato em casos de emergência.
 
 ---
 
 ## 🎯 Funcionalidades Principais
 
-*   **🚨 Botão de Emergência (SOS):** Um botão de acionamento imediato visível em todas as telas da aplicação. Permite alertar a polícia militar (190) ou enviar uma mensagem de socorro via SMS para os contatos cadastrados de forma instantânea. **Funciona de forma independente, mesmo sem login ativo.**
+*   **🚨 Botão de Emergência (SOS):** Um botão de acionamento imediato visível em todas as telas da aplicação. Permite alertar a polícia militar (190) ou enviar uma mensagem de socorro via SMS para contatos de confiança.
 *   **🔒 Cadastro e Autenticação Seguros:** Sistema de cadastro de usuárias individuais e login com senhas criptografadas, garantindo isolamento total de dados entre os perfis.
 *   **📞 Contatos de Emergência:** Cadastro estruturado de até 5 contatos de confiança (nome, e-mail, endereço e telefone) vinculados à conta da usuária.
-*   **📝 Registro Confidencial de Denúncias:** Formulário para registrar ocorrências contendo data, tipo de violência (física, psicológica, moral, patrimonial ou sexual), descrição dos fatos, nome do agressor e parentesco. Visando à integridade do processo, **uma denúncia registrada não pode ser editada ou excluída pela usuária**.
+*   **📝 Registro Confidencial de Denúncias:** Formulário para registrar ocorrências contendo data, tipo de violência (física, psicológica, moral, patrimonial ou sexual), descrição dos fatos e informações adicionais.
 *   **📖 Informação e Rede de Apoio:** Páginas de conteúdo educativo sobre violência de gênero, orientações legais e canal de apoio com acesso a atendimento psicológico online.
 
 ---
@@ -35,21 +35,26 @@ O protótipo funcional do sistema foi construído visando leveza, responsividade
 O repositório está organizado de forma a separar os códigos do protótipo funcional, as documentações do projeto e as modelagens de engenharia de software:
 
 ```text
-├── VozSegura/                     # Código-fonte da aplicação protótipo
-│   ├── cadastro.html              # Tela de cadastro de usuária
-│   ├── contato.html               # Tela de contatos de emergência
-│   ├── denuncia.html              # Formulário de registro de denúncias
-│   ├── emergencia.html            # Tela de envio de ajuda / SOS
-│   ├── index.html                 # Página inicial (boas-vindas)
-│   ├── info.html                  # Guia informativo e de rede de apoio
-│   ├── login.html                 # Tela de login/autenticação
-│   ├── menu.html                  # Dashboard e menu principal de navegação
-│   ├── relatorio.html             # Listagem/Histórico de denúncias
-│   ├── style.css                  # Estilização global da interface
-│   └── script.js                  # Lógica de validações e simulações (com Sentry)
+EngenhariaDeSoftware/TrabalhoEngSoft/
+├── README.md                              # Este arquivo - documentação principal do projeto
 │
-├── Diagrama Casos de uso.png      # Diagrama Geral de Casos de Uso (UML)
-└── Diagrama de classes.png        # Diagrama de Classes UML (Domínio)
+├── VozSegura/                             # Código-fonte da aplicação protótipo
+│   ├── index.html                         # Página inicial (boas-vindas)
+│   ├── login.html                         # Tela de login/autenticação
+│   ├── cadastro.html                      # Tela de cadastro de usuária
+│   ├── menu.html                          # Dashboard e menu principal de navegação
+│   ├── contato.html                       # Tela de contatos de emergência
+│   ├── denuncia.html                      # Formulário de registro de denúncias
+│   ├── relatorio.html                     # Listagem/Histórico de denúncias
+│   ├── emergencia.html                    # Tela de envio de ajuda / SOS
+│   ├── info.html                          # Guia informativo e de rede de apoio
+│   ├── style.css                          # Estilização global da interface
+│   ├── script.js                          # Lógica de validações e simulações (com Sentry)
+│   └── screenshots/                       # Capturas de tela da aplicação
+│
+├── VozSegura_Eng.DeSoft.docx              # Documento completo do projeto (Word)
+├── VozSegura_Eng.DeSoft.pdf               # Documento completo do projeto (PDF)
+└── apresentacao_slides.pptx               # Apresentação em slides do projeto
 ```
 
 ---
@@ -59,7 +64,7 @@ O repositório está organizado de forma a separar os códigos do protótipo fun
 A concepção do projeto seguiu um processo rígido de especificação técnica e modelagem UML:
 
 1.  **Casos de Uso:** Mapeamento de interações críticas como Cadastrar Conta (UC01), Realizar Login (UC02), Acionar SOS (UC03), Registrar Denúncia (UC04) e Cadastrar Contato (UC05).
-2.  **Modelo de Dados:** Estruturado com a entidade pai **Usuária** exercendo centralidade sobre as tabelas filhas (Contatos, Denúncias e Pedidos de Ajuda) com regras em cascata para atualizações.
+2.  **Modelo de Dados:** Estruturado com a entidade pai **Usuária** exercendo centralidade sobre as tabelas filhas (Contatos, Denúncias e Pedidos de Ajuda) com regras em cascata para atualização e exclusão segura de dados.
 3.  **Diagrama de Classes:** Define a arquitetura interna do domínio orientada a objetos das principais entidades do sistema.
 
 ---
@@ -68,7 +73,7 @@ A concepção do projeto seguiu um processo rígido de especificação técnica 
 
 *   **Testes de Caixa Preta:** Validações de entrada em todos os formulários (impedindo campos vazios, dados incorretos ou e-mails duplicados).
 *   **Resiliência no SOS:** O fluxo de emergência foi modelado para prever falhas de rede, armazenando o status da solicitação localmente em caso de falta de conexão.
-*   **Monitoramento de Erros:** Utilização do Sentry para capturar de forma proativa bugs em produção (falhas em requisições, logins ou envios de formulários), aumentando a estabilidade do produto final.
+*   **Monitoramento de Erros:** Utilização do Sentry para capturar de forma proativa bugs em produção (falhas em requisições, logins ou envios de formulários), aumentando a estabilidade do sistema.
 
 ---
 
