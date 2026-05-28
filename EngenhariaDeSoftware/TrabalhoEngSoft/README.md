@@ -2,6 +2,7 @@
 > **Sistema de Apoio ao Enfrentamento da Violência contra a Mulher**
 
 **Equipe:** Eric Assis e José Raimundo
+
 **Link do projeto:** https://vozsegurawyden.netlify.app/
 
 O **Voz Segura** é uma aplicação desenvolvida com o objetivo de auxiliar no combate à violência contra a mulher e na prevenção ao feminicídio. O projeto foi idealizado para atender às necessidades de mulheres em situação de vulnerabilidade, oferecendo um espaço de denúncia, acolhimento e acesso a informações sobre direitos e redes de apoio.
